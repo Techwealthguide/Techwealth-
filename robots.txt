@@ -1,3 +1,14 @@
 User-agent: *
 Allow: /
-Sitemap: https://techwealthguide.netlify.app/sitemap.xml
+Disallow: /admin/
+Disallow: /private/
+
+# Sitemap Location
+Sitemap: https://techwealthguide.github.io/Techwealth-/sitemap.xml
+
+# Crawl delay (optional)
+Crawl-delay: 1
+
+# TECHWEALTH Business Website
+# Contact: EnryOnry@gmail.com
+# Generated: 2024 
