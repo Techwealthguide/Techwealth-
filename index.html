@@ -43,7 +43,7 @@
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
         }
-
+  
         .navbar {
             background: rgba(255, 255, 255, 0.98);
             padding: 1rem 0;
@@ -53,7 +53,7 @@
             z-index: 1000;
             box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
             backdrop-filter: blur(10px);
-        }
+        } 
 
         .nav-content {
             max-width: 1200px;
@@ -580,5 +580,24 @@
             &copy; 2025 TechWealth Guide. All rights reserved. Making tomorrow's millionaires today.
         </div>
     </footer>
+
+    <script>
+    let lastScrollTop = 0;
+    const navbar = document.querySelector('.navbar');
+
+    window.addEventListener('scroll', function() {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+        if (scrollTop > lastScrollTop && scrollTop > 100) {
+            // Scrolling DOWN - hide navbar
+            navbar.style.transform = 'translateY(-100%)';
+        } else {
+            // Scrolling UP - show navbar
+            navbar.style.transform = 'translateY(0)';
+        }
+        
+        lastScrollTop = scrollTop;
+    });
+    </script>
 </body>
 </html>
