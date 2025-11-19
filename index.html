@@ -575,20 +575,20 @@
                 </p>
             </div>
         </div>
-
+        
         <div class="copyright">
             &copy; 2025 TechWealth Guide. All rights reserved. Making tomorrow's millionaires today.
         </div>
     </footer>
 
     <script>
-let lastScrollTop = 0;
-const navbar = document.querySelector('.navbar');
-let navbarHidden = false;
+    let lastScrollTop = 0;
+    const navbar = document.querySelector('.navbar');
+    let navbarHidden = false;
 
-window.addEventListener('scroll', function() {
-    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    const scrollDiff = scrollTop - lastScrollTop;
+   window.addEventListener('scroll', function() {
+       let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+       const scrollDiff = scrollTop - lastScrollTop;
     
     // Only hide after scrolling down 50px
     if (scrollDiff > 50 && scrollTop > 200 && !navbarHidden) {
@@ -603,7 +603,7 @@ window.addEventListener('scroll', function() {
     }
     
     lastScrollTop = scrollTop;
-});
-    </script>
+    });
+    </script>    
 </body>
 </html>
