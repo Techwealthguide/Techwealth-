@@ -582,22 +582,28 @@
     </footer>
 
     <script>
-    let lastScrollTop = 0;
-    const navbar = document.querySelector('.navbar');
+let lastScrollTop = 0;
+const navbar = document.querySelector('.navbar');
+let navbarHidden = false;
 
-    window.addEventListener('scroll', function() {
-        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        
-        if (scrollTop > lastScrollTop && scrollTop > 100) {
-            // Scrolling DOWN - hide navbar
-            navbar.style.transform = 'translateY(-100%)';
-        } else {
-            // Scrolling UP - show navbar
-            navbar.style.transform = 'translateY(0)';
-        }
-        
-        lastScrollTop = scrollTop;
-    });
+window.addEventListener('scroll', function() {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const scrollDiff = scrollTop - lastScrollTop;
+    
+    // Only hide after scrolling down 50px
+    if (scrollDiff > 50 && scrollTop > 200 && !navbarHidden) {
+        navbar.style.transform = 'translateY(-100%)';
+        navbarHidden = true;
+    }
+    
+    // Only show after scrolling up 25px OR when near top
+    if ((scrollDiff < -25 || scrollTop < 100) && navbarHidden) {
+        navbar.style.transform = 'translateY(0)';
+        navbarHidden = false;
+    }
+    
+    lastScrollTop = scrollTop;
+});
     </script>
 </body>
 </html>
