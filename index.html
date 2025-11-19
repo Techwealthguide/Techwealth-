@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechWealth Guide | AI & Crypto Wealth Strategies</title>
+    <meta name="description" content="Join investors learning proven AI & crypto strategies. Turn $50 into $500 with our free blueprint.">
+    
+    <!-- Professional Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💎</text></svg>">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="TechWealth Guide | AI & Crypto Wealth Strategies">
+    <meta property="og:description" content="Join investors learning proven AI & crypto strategies. Turn $50 into $500 with our free blueprint.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://techwealthguide.github.io/Techwealth-/">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="TechWealth Guide | AI & Crypto Wealth Strategies">
+    <meta name="twitter:description" content="Join investors learning proven AI & crypto strategies. Turn $50 into $500 with our free blueprint.">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .navbar {
+            background: rgba(255, 255, 255, 0.98);
+            padding: 0.8rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease;
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 1rem;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #2563eb;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #374151;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #2563eb;
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 120px 1rem 2rem;
+        }
+
+        .hero-content h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .proof-badge {
+            background: rgba(255,255,255,0.2);
+            padding: 1.2rem;
+            border-radius: 12px;
+            margin: 2.5rem auto;
+            max-width: 450px;
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+
+        .form {
+            display: flex;
+            gap: 0.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 2.5rem 0;
+        }
+
+        .form input {
+            padding: 1.2rem;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 8px;
+            min-width: 280px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .form button {
+            padding: 1.2rem 2.5rem;
+            background: #f59e0b;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+        }
+
+        .form button:hover {
+            background: #d97706;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
+        }
+
+        /* Social Media Push Section */
+        .social-push {
+            background: rgba(255,255,255,0.15);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 3rem auto;
+            max-width: 600px;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .social-push h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .social-push p {
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+        }
+
+        .social-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .social-btn {
+            display: block;
+            padding: 1rem 1.5rem;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .social-btn.instagram {
+            background: linear-gradient(45deg, #E1306C, #F77737);
+            color: white;
+        }
+
+        .social-btn.facebook {
+            background: #1877F2;
+            color: white;
+        }
+
+        .social-btn.tiktok {
+            background: #000000;
+            color: white;
+            border: 2px solid #00f2ea;
+        }
+
+        .social-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        .quick-wins {
+            padding: 5rem 1rem;
+            background: white;
+        }
+
+        .wins-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .win-card {
+            background: #f8fafc;
+            padding: 2.5rem 2rem;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid #e2e8f0;
+        }
+
+        .win-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .win-icon { 
+            font-size: 3.5rem; 
+            margin-bottom: 1.5rem; 
+            display: block;
+        }
+        
+        .win-card h3 { 
+            margin-bottom: 1.2rem; 
+            color: #1e293b;
+            font-size: 1.4rem;
+        }
+
+        .features {
+            padding: 5rem 1rem;
+            background: #f1f5f9;
+        }
+
+        .features-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2.5rem 2rem;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid #e2e8f0;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .testimonials {
+            padding: 5rem 1rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .testimonial {
+            background: rgba(255,255,255,0.12);
+            padding: 2.5rem;
+            border-radius: 15px;
+            margin: 1.5rem 0;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .cta-section {
+            padding: 5rem 1rem;
+            background: #1e293b;
+            color: white;
+            text-align: center;
+        }
+
+        /* Email Gate Styles */
+        .affiliate-gate {
+            background: rgba(255,255,255,0.15);
+            padding: 2.5rem;
+            border-radius: 15px;
+            margin: 3rem 0;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .affiliate-links {
+            display: none;
+            animation: fadeIn 0.6s ease-in;
+        }
+
+        .platform-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2.5rem;
+        }
+
+        .platform-card {
+            background: rgba(255,255,255,0.12);
+            padding: 2rem 1.5rem;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: all 0.3s ease;
+        }
+
+        .platform-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255,255,255,0.18);
+        }
+
+        .platform-btn {
+            display: inline-block;
+            background: #f59e0b;
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 8px;
+            margin-top: 1.5rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+        }
+
+        .platform-btn:hover {
+            background: #d97706;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(25px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .footer {
+            background: #0f172a;
+            color: #cbd5e1;
+            padding: 4rem 1rem 2rem;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2.5rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .social-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+            padding: 0.8rem 1.5rem;
+            border: 2px solid #334155;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .social-links a:hover {
+            background: #334155;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .disclaimer-box {
+            margin: 2.5rem auto;
+            max-width: 700px;
+            text-align: left;
+            background: rgba(255,255,255,0.05);
+            padding: 2rem;
+            border-radius: 10px;
+            border-left: 4px solid #f59e0b;
+        }
+
+        .disclaimer-box h4 {
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero-content h1 { font-size: 2.2rem; }
+            .hero { padding: 100px 1rem 2rem; }
+            .form { flex-direction: column; align-items: center; }
+            .form input { width: 100%; max-width: 320px; }
+            .nav-content { flex-direction: column; gap: 1rem; }
+            .platform-grid { grid-template-columns: 1fr; }
+            .social-buttons { gap: 0.8rem; }
+            .social-btn { padding: 0.9rem 1.2rem; font-size: 0.95rem; }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h1 { font-size: 1.8rem; }
+            .hero-content p { font-size: 1.1rem; }
+            .win-card, .feature-card { padding: 2rem 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">💎 TechWealth Guide</div>
+            <div class="nav-links">
+                <a href="#quick-wins">Quick Wins</a>
+                <a href="#features">Strategies</a>
+                <a href="#testimonials">Success Stories</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Stop Missing Out on AI & Crypto Wealth</h1>
+            <p>Join 2,347+ investors using proven methods to turn $50 into $500. Real strategies, no hype.</p>
+            
+            <div class="proof-badge">
+                ⚡ Sarah K. made $347 in 3 weeks: "Finally, something that actually works!"
+            </div>
+
+            <!-- Social Media Push -->
+            <div class="social-push">
+                <h3>🔔 Follow for Real-Time Profit Opportunities!</h3>
+                <p>Get daily signals, market insights, and exclusive strategies:</p>
+                <div class="social-buttons">
+                    <a href="https://instagram.com/techwealth.official" class="social-btn instagram" target="_blank">
+                        📸 Instagram - Daily Trading Tips
+                    </a>
+                    <a href="https://facebook.com/TECHWEALTHGUIDE" class="social-btn facebook" target="_blank">
+                        📘 Facebook - Live Q&A Sessions
+                    </a>
+                    <a href="https://tiktok.com/@techwealthguide" class="social-btn tiktok" target="_blank">
+                        🎵 TikTok - Quick Profit Methods
+                    </a>
+                </div>
+            </div>
+
+            <!-- Email Gate for Affiliate Links -->
+            <div id="affiliate-gate" class="affiliate-gate">
+                <h3>🔒 Get Exclusive Platform Access & Bonuses</h3>
+                <p>Enter your email to unlock our vetted platforms with special signup bonuses:</p>
+                
+                <form action="https://formspree.io/f/xyzldovj" method="POST" class="form">
+                    <input type="email" name="email" placeholder="Enter your best email..." required>
+                    <button type="submit">Unlock Exclusive Access →</button>
+                </form>
+                
+                <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
+                    ✅ We only recommend platforms we personally use and trust
+                </p>
+            </div>
+
+            <!-- Hidden Affiliate Links -->
+            <div id="affiliate-links" class="affiliate-links">
+                <h3>🎉 Your Exclusive Platform Access</h3>
+                <p>Here are our carefully vetted platforms with special bonuses:</p>
+                
+                <div class="platform-grid">
+                    <div class="platform-card">
+                        <h4>💎 Binance</h4>
+                        <p>20% trading fee discount + $100 welcome bonus</p>
+                        <p><small>✅ Our #1 recommended exchange</small></p>
+                        <a href="https://accounts.binance.com/register?ref=EQOGZTVS" 
+                           class="platform-btn" target="_blank">
+                           Start Trading →
+                        </a>
+                    </div>
+                    
+                    <div class="platform-card">
+                        <h4>📧 More Platforms Coming</h4>
+                        <p>We're testing new platforms to ensure they're profitable</p>
+                        <p><small>🔒 Quality over quantity - we test everything first</small></p>
+                        <button class="platform-btn" onclick="showEmailForm()">
+                            Get Early Access →
+                        </button>
+                    </div>
+                    
+                    <div class="platform-card">
+                        <h4>🤖 AI Tools Access</h4>
+                        <p>Premium AI trading tools and signals</p>
+                        <p><small>🚀 Currently being tested for maximum profits</small></p>
+                        <button class="platform-btn" onclick="showEmailForm()">
+                            Join Waitlist →
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="quick-wins" class="quick-wins">
+        <div class="wins-container">
+            <div class="win-card">
+                <div class="win-icon">⚡</div>
+                <h3>48-Hour Profit Method</h3>
+                <p>Start with $0 and generate your first $100 within 48 hours using free AI tools. Tested by 127 members.</p>
+            </div>
+            <div class="win-card">
+                <div class="win-icon">💸</div>
+                <h3>$100/Day Crypto Strategy</h3>
+                <p>Set-and-forget techniques that work while you sleep. Average results: $87-143 daily.</p>
+            </div>
+            <div class="win-card">
+                <div class="win-icon">📈</div>
+                <h3>3-Step AI System</h3>
+                <p>Our most reliable method turned $50 into $500 for 89% of users. Step-by-step guidance.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="features-container">
+            <div class="feature-card">
+                <div class="feature-icon">🎯</div>
+                <h3>Proven & Tested</h3>
+                <p>Every strategy is battle-tested with real money before being shared. No theoretical nonsense.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🛡️</div>
+                <h3>Risk-Managed</h3>
+                <p>Learn proper position sizing and risk management. Maximum 2% risk per trade.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔄</div>
+                <h3>Continuous Updates</h3>
+                <p>Markets change. We update strategies weekly to ensure they remain profitable.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <h2 style="margin-bottom: 3rem; font-size: 2.2rem;">Real People, Real Results</h2>
+        
+        <div class="testimonial">
+            <p>"I was driving Uber 60 hours/week. The 48-hour method helped me make $217 in my first weekend. Now I make more on weekends than my full-time job."</p>
+            <p><strong>- Mike R., Former Uber Driver</strong></p>
+        </div>
+        <div class="testimonial">
+            <p>"As a single mom, I needed flexible income. The 'lazy strategy' now makes me $75-120/day passively. Life-changing!"</p>
+            <p><strong>- Jessica L., Single Mother</strong></p>
+        </div>
+        <div class="testimonial">
+            <p>"Lost $3,000 with other 'gurus'. Here I made it back in 3 weeks. Finally, honest education that works."</p>
+            <p><strong>- David T., Recovering Investor</strong></p>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div>
+            <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Start Building Your Wealth Today</h2>
+            <p style="font-size: 1.3rem; margin-bottom: 2.5rem;">Get instant access to all our proven strategies completely free.</p>
+            
+            <form action="https://formspree.io/f/xyzldovj" method="POST" class="form">
+                <input type="email" name="email" placeholder="Enter your email for instant access..." required>
+                <button type="submit">Get Free Access Now →</button>
+            </form>
+
+            <div class="social-push" style="background: rgba(255,255,255,0.1); margin-top: 3rem;">
+                <h3>📱 Follow Our Journey</h3>
+                <p>Watch real-time results and get daily insights:</p>
+                <div class="social-links">
+                    <a href="https://instagram.com/techwealth.official" target="_blank">Instagram</a>
+                    <a href="https://facebook.com/TECHWEALTHGUIDE" target="_blank">Facebook</a>
+                    <a href="https://tiktok.com/@techwealthguide" target="_blank">TikTok</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="#privacy">Privacy Policy</a>
+            <a href="#terms">Terms of Service</a>
+            <a href="#disclaimer">Risk Disclaimer</a>
+            <a href="#contact">Contact Us</a>
+        </div>
+
+        <div class="social-links">
+            <a href="https://instagram.com/techwealth.official" target="_blank">📸 Instagram</a>
+            <a href="https://facebook.com/TECHWEALTHGUIDE" target="_blank">📘 Facebook</a>
+            <a href="https://tiktok.com/@techwealthguide" target="_blank">🎵 TikTok</a>
+        </div>
+
+        <div class="disclaimer-box">
+            <h4>🛡️ Important Disclaimer</h4>
+            <p><strong>Investing carries substantial risk.</strong> Past performance doesn't guarantee future results. 
+            We are educators sharing our methods, not financial advisors. Only risk capital you can afford to lose. 
+            We only recommend platforms we personally use and have thoroughly tested.</p>
+        </div>
+
+        <div style="margin-top: 2.5rem; color: #64748b; font-size: 0.9rem;">
+            &copy; 2025 TechWealth Guide. Empowering smart investors with proven strategies. 
+            <br>Making tomorrow's millionaires today.
+        </div>
+    </footer>
+
+    <script>
+        // Improved navbar behavior - faster response
+        let lastScroll = 0;
+        const navbar = document.querySelector('.navbar');
+        const scrollThreshold = 50;
+        
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll <= scrollThreshold) {
+                navbar.style.transform = 'translateY(0)';
+            } else if (currentScroll > lastScroll && currentScroll > 100) {
+                navbar.style.transform = 'translateY(-100%)';
+            } else {
+                navbar.style.transform = 'translateY(0)';
+            }
+            
+            lastScroll = currentScroll;
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ 
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Email Gate System
+        function showAffiliateLinks() {
+            document.getElementById('affiliate-gate').style.display = 'none';
+            document.getElementById('affiliate-links').style.display = 'block';
+            localStorage.setItem('emailCaptured', 'true');
+            
+            // Track conversion
+            console.log('Email captured - affiliate links unlocked');
+        }
+
+        function showEmailForm() {
+            document.getElementById('affiliate-links').style.display = 'none';
+            document.getElementById('affiliate-gate').style.display = 'block';
+        }
+
+        // Check if already submitted email
+        if(localStorage.getItem('emailCaptured')) {
+            showAffiliateLinks();
+        }
+
+        // Auto-show links after form submission
+        document.querySelectorAll('form').forEach(form => {
+            form.addEventListener('submit', function(e) {
+                // Let Formspree handle the submission
+                setTimeout(showAffiliateLinks, 800);
+            });
+        });
+
+        // Add loading states for better UX
+        document.querySelectorAll('button, .platform-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                if(this.type !== 'submit') {
+                    this.style.opacity = '0.8';
+                    this.style.transform = 'scale(0.98)';
+                    setTimeout(() => {
+                        this.style.opacity = '1';
+                        this.style.transform = 'scale(1)';
+                    }, 200);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
