@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechWealth Guide | AI & Crypto Wealth Strategies</title>
+    <meta name="description" content="Join thousands of investors learning proven AI & crypto strategies. Turn $50 into $500 with our free blueprint.">
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4246487406207678" crossorigin="anonymous"></script>
+    
+    <!-- PERMANENT FAVICON -->
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAA7EAAAOxAGVKw4bAAABHElEQVR4nO2WwQrCMBBF3ykevHgQb4IHwT/g/Q8o3kXw4kHwD3j/gyAevHgQ/AOCeBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8eBA8ePgB8AZWJlKdD1bPJgAAAABJRU5ErkJggg==">
+    
+    <style>
+        /* Your existing CSS styles */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 0.7rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease;
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 1rem;
+        }
+
+        .logo {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #2563eb;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .welcome-text {
+            font-size: 0.9rem;
+            color: #374151;
+            font-weight: 500;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #374151;
+            font-weight: 600;
+            transition: color 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .nav-links a:hover {
+            color: #2563eb;
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 100px 1rem 2rem;
+        }
+
+        .hero-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            padding-top: 0;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .proof-badge {
+            background: rgba(255,255,255,0.2);
+            padding: 1.2rem;
+            border-radius: 12px;
+            margin: 2.5rem auto;
+            max-width: 450px;
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+
+        /* CUSTOMIZED MAILERLITE FORM STYLES */
+        .binance-gate-container {
+            background: rgba(255,255,255,0.15);
+            padding: 2.5rem;
+            border-radius: 15px;
+            margin: 3rem 0;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.2);
+            max-width: 500px;
+        }
+
+        .binance-gate-container h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .binance-gate-container p {
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+        }
+
+        /* Customize MailerLite Form */
+        .ml-embedded {
+            background: transparent !important;
+            border: none !important;
+            padding: 0 !important;
+        }
+
+        /* Form heading customization */
+        .ml-embedded .ml-form-embedWrapper .ml-form-embedBody h4 {
+            color: white !important;
+            font-size: 1.4rem !important;
+            text-align: center !important;
+            margin-bottom: 1rem !important;
+            font-weight: 600 !important;
+        }
+
+        /* Form text customization */
+        .ml-embedded .ml-form-embedBody .ml-form-embedContent p {
+            color: rgba(255,255,255,0.9) !important;
+            text-align: center !important;
+            font-size: 1.1rem !important;
+            margin-bottom: 1.5rem !important;
+        }
+
+        /* Form inputs customization */
+        .ml-embedded input[type="text"],
+        .ml-embedded input[type="email"] {
+            background: rgba(255,255,255,0.95) !important;
+            border: 2px solid rgba(255,255,255,0.3) !important;
+            border-radius: 8px !important;
+            padding: 1rem !important;
+            font-size: 1rem !important;
+            color: #1f2937 !important;
+            width: 100% !important;
+            margin-bottom: 1rem !important;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1) !important;
+        }
+
+        .ml-embedded input[type="text"]:focus,
+        .ml-embedded input[type="email"]:focus {
+            outline: none !important;
+            border-color: #f59e0b !important;
+            box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.3) !important;
+        }
+
+        /* Form labels customization */
+        .ml-embedded .ml-form-formContent .ml-form-fieldRow label {
+            color: white !important;
+            font-weight: 500 !important;
+            margin-bottom: 0.5rem !important;
+            display: block !important;
+            text-align: left !important;
+        }
+
+        /* Submit button customization */
+        .ml-embedded .ml-form-embedBody .ml-form-formContent .ml-form-embedSubmit button {
+            background: #f59e0b !important;
+            color: white !important;
+            border: none !important;
+            border-radius: 8px !important;
+            padding: 1rem 2rem !important;
+            font-weight: 700 !important;
+            font-size: 1.1rem !important;
+            cursor: pointer !important;
+            transition: all 0.3s ease !important;
+            box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3) !important;
+            width: 100% !important;
+            margin-top: 1rem !important;
+        }
+
+        .ml-embedded .ml-form-embedBody .ml-form-formContent .ml-form-embedSubmit button:hover {
+            background: #d97706 !important;
+            transform: translateY(-2px) !important;
+            box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4) !important;
+        }
+
+        /* Success message customization */
+        .ml-embedded .ml-form-successBody .ml-form-successContent h4 {
+            color: #10b981 !important;
+            font-size: 1.5rem !important;
+            margin-bottom: 1rem !important;
+        }
+
+        .ml-embedded .ml-form-successBody .ml-form-successContent p {
+            color: white !important;
+            font-size: 1.1rem !important;
+        }
+
+        /* JavaScript to customize form text */
+        <style>
+        .custom-form-heading {
+            display: none !important;
+        }
+    </style>
+
+    <script>
+        // Customize MailerLite form text after it loads
+        function customizeMailerLiteForm() {
+            setTimeout(() => {
+                // Change form heading
+                const heading = document.querySelector('.ml-form-embedBody h4');
+                if (heading) {
+                    heading.textContent = '🔒 Get Exclusive Binance Access';
+                }
+                
+                // Change form description
+                const description = document.querySelector('.ml-form-embedContent p');
+                if (description) {
+                    description.textContent = 'Enter your email for 20% trading fee discount + exclusive welcome bonus';
+                }
+                
+                // Change first name label
+                const firstNameLabel = document.querySelector('label[for*="name"]');
+                if (firstNameLabel) {
+                    firstNameLabel.textContent = 'First Name (Optional)';
+                }
+                
+                // Change email label
+                const emailLabel = document.querySelector('label[for*="email"]');
+                if (emailLabel) {
+                    emailLabel.textContent = 'Email Address *';
+                }
+                
+                // Change button text
+                const button = document.querySelector('.ml-form-embedSubmit button');
+                if (button) {
+                    button.textContent = 'Unlock Binance Access →';
+                }
+                
+                // Change placeholder texts
+                const nameInput = document.querySelector('input[type="text"]');
+                if (nameInput) {
+                    nameInput.placeholder = 'Your first name (optional)';
+                }
+                
+                const emailInput = document.querySelector('input[type="email"]');
+                if (emailInput) {
+                    emailInput.placeholder = 'Your best email address *';
+                }
+            }, 1000);
+        }
+
+        // Call when MailerLite loads
+        document.addEventListener('ml-loaded', customizeMailerLiteForm);
+        
+        // Also try on page load
+        window.addEventListener('load', customizeMailerLiteForm);
+        
+        // And every few seconds until form is customized
+        let customizationAttempts = 0;
+        const maxAttempts = 10;
+        
+        function tryCustomizeForm() {
+            customizationAttempts++;
+            if (customizationAttempts <= maxAttempts) {
+                customizeMailerLiteForm();
+                setTimeout(tryCustomizeForm, 500);
+            }
+        }
+        
+        setTimeout(tryCustomizeForm, 1000);
+    </script>
+
+    <!-- Add this hidden form for manual email capture -->
+    <div id="manual-email-capture" style="display: none;">
+        <div class="binance-gate-container">
+            <h3>🔒 Get Exclusive Binance Access & 20% Fee Discount</h3>
+            <p>Enter your email to unlock Binance with special signup bonus and automatic redirection:</p>
+            
+            <form id="manual-email-form" class="form">
+                <input type="email" id="manual-email" placeholder="Enter your best email..." required>
+                <button type="submit">Unlock Binance Access →</button>
+            </form>
+            
+            <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
+                ✅ 20% trading fee discount + exclusive welcome bonus
+            </p>
+        </div>
+    </div>
+
+    <!-- MailerLite Universal -->
+    <script>
+        (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+        .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+        n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+        (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+        ml('account', '1947917');
+    </script>
+    <!-- End MailerLite Universal -->
+
+    <script>
+        // Handle form submission and redirect
+        document.addEventListener('ml-submit-success', function(event) {
+            // Email captured in MailerLite
+            const formData = event.detail.formData;
+            const email = formData.get('fields[email]') || formData.get('email');
+            
+            // Show success and redirect
+            showSuccessAndRedirect(email);
+        });
+
+        // Manual form submission (backup)
+        document.getElementById('manual-email-form')?.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('manual-email').value;
+            if (email) {
+                showSuccessAndRedirect(email);
+                // You might want to manually add to MailerLite later
+                console.log('Manual email capture:', email);
+            }
+        });
+
+        function showSuccessAndRedirect(email) {
+            // Replace form with success message
+            document.querySelector('.ml-embedded').innerHTML = `
+                <div style="text-align: center; padding: 2rem; color: white;">
+                    <h3 style="color: #10b981; font-size: 1.5rem; margin-bottom: 1rem;">✅ Success! Welcome to TechWealth Guide</h3>
+                    <p><strong>Check your email for:</strong></p>
+                    <ul style="text-align: left; display: inline-block; margin: 1rem 0; color: white;">
+                        <li>📧 Welcome sequence with premium strategies</li>
+                        <li>🎁 Exclusive Binance bonus details</li>
+                        <li>⚡ Daily profit opportunities</li>
+                    </ul>
+                    <div style="margin: 2rem 0;">
+                        <div style="background: rgba(255,255,255,0.2); padding: 1rem; border-radius: 8px;">
+                            <p>⏳ Redirecting to Binance in <span id="countdown">5</span> seconds...</p>
+                        </div>
+                    </div>
+                    <p><a href="https://accounts.binance.com/register?ref=EQOGZTVS" 
+                          style="color: #f59e0b; text-decoration: underline; font-weight: bold;">
+                          Click here to go to Binance now
+                       </a></p>
+                </div>
+            `;
+            
+            // Countdown and redirect
+            let countdown = 5;
+            const countdownElement = document.getElementById('countdown');
+            const countdownInterval = setInterval(() => {
+                countdown--;
+                countdownElement.textContent = countdown;
+                
+                if (countdown <= 0) {
+                    clearInterval(countdownInterval);
+                    window.location.href = 'https://accounts.binance.com/register?ref=EQOGZTVS';
+                }
+            }, 1000);
+            
+            // Store locally
+            localStorage.setItem('binanceEmailCaptured', 'true');
+            localStorage.setItem('userEmail', email);
+        }
+
+        // Your existing JavaScript functions remain
+        // ... (rest of your existing JavaScript code)
+    </script>
+
+    <!-- Add this to your hero section where you want the form -->
+    <div class="binance-gate-container">
+        <div class="ml-embedded" data-form="PDyzKZ"></div>
+    </div>
