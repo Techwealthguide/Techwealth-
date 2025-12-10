@@ -1,0 +1,619 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="description" content="Tech Wealth Guide - Learn AI, Crypto, and Tech Investing. Build your future today." />
+<title>Tech Wealth Guide</title>
+
+<!-- Favicon (inline SVG data URI) -->
+<link rel="icon" href='data:image/svg+xml;utf8,
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <circle cx="50" cy="50" r="45" fill="%2300aaff" stroke="%23004566" stroke-width="4"/>
+  <text x="50" y="60" font-size="44" text-anchor="middle" fill="%23002233" font-family="Arial, Helvetica, sans-serif">$</text>
+</svg>'>
+
+<style>
+  :root{
+    --bg:#f7f8fb; --card:#ffffff; --muted:#6b7280; --accent:#ff9800; --brand:#0b6ef0; --dark:#0b1220;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:Inter,system-ui,Arial,sans-serif;background:var(--bg);color:var(--dark);line-height:1.55}
+  a{color:var(--brand);text-decoration:none}
+  header{background:linear-gradient(90deg,#06203a,#0b2b50);color:#fff;padding:20px 16px;display:flex;align-items:center;gap:14px}
+  .logo-svg{width:140px;height:auto;display:block}
+  header h1{margin:0;font-size:1.5rem}
+  header p{margin:0;color:#cfe3ff;font-size:0.9rem}
+  nav{display:flex;gap:8px;flex-wrap:wrap;padding:10px 16px;background:#071428;justify-content:center}
+  nav a{color:#fff;padding:8px 12px;border-radius:8px}
+  nav a:hover{background:rgba(255,255,255,0.03);color:var(--accent)}
+  .hero{background:var(--brand);color:#fff;padding:56px 16px;text-align:center}
+  .container{max-width:1100px;margin:0 auto;padding:20px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+  .card{background:var(--card);padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(8,20,40,0.06)}
+  h2,h3{margin:0 0 10px}
+  .btn{background:var(--accent);color:#fff;padding:10px 14px;border-radius:8px;border:none;cursor:pointer}
+  .small{font-size:0.92rem;color:var(--muted)}
+  .ad-placeholder{background:#f0f3f6;padding:10px;border-radius:8px;text-align:center;margin-top:10px}
+  footer{background:#071428;color:#fff;padding:18px;text-align:center;margin-top:28px}
+  .newsletter input[type=email]{padding:10px;border-radius:8px;border:1px solid #e2e8f0;width:70%;max-width:320px}
+  .close-btn{background:#e5e7eb;border:none;padding:8px;border-radius:8px;cursor:pointer}
+  .muted{color:var(--muted)}
+  table{width:100%;border-collapse:collapse;margin-top:8px}
+  th,td{padding:8px;border-bottom:1px solid #f0f0f0;text-align:left}
+  .modal-bg{position:fixed;inset:0;background:rgba(5,10,20,0.6);display:none;align-items:center;justify-content:center;z-index:80}
+  .modal{background:var(--card);padding:18px;border-radius:10px;max-width:560px;width:94%}
+  .hidden{display:none}
+  .logo-text{font-weight:700;font-size:1.1rem}
+  .subtitle{color:#ffd7a6}
+  @media(max-width:600px){header{flex-direction:column;align-items:flex-start}}
+</style>
+
+<!-- MailerLite Universal (user-provided) -->
+<div style="display:none">
+  <!-- keep the code in head for MailerLite -->
+  <div class="ml-embedded" data-form="PDyzKZ"></div>
+</div>
+<script>
+  (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);},l=d.createElement(e),l.async=1,l.src=u,n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+  (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+  ml('account', '1947917');
+</script>
+
+</head>
+<body>
+
+  <!-- Header with inline logo SVG (embedded so single file) -->
+  <header>
+    <!-- Inline SVG logo approximating the provided brand (portable) -->
+    <svg class="logo-svg" viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="TechWealth Guide logo">
+      <rect x="6" y="14" width="56" height="56" rx="6" fill="#ff9800"/>
+      <rect x="6" y="76" width="24" height="24" rx="4" fill="#ffffff"/>
+      <rect x="38" y="76" width="24" height="24" rx="4" fill="#ffffff"/>
+      <!-- icons: lightning, diamond, chart -->
+      <g transform="translate(104,18)">
+        <path d="M10 46 L28 10 L22 10 L34 46z" fill="#ffd23f" />
+      </g>
+      <g transform="translate(164,6)">
+        <polygon points="30,6 42,26 30,46 18,26" fill="#82e0ff" opacity="0.95"/>
+      </g>
+      <g transform="translate(224,8)">
+        <rect x="2" y="6" width="44" height="36" rx="2" fill="#fff" stroke="#d0d7df"/>
+        <polyline points="6,36 18,26 30,32 38,14" fill="none" stroke="#ff6b6b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+      <text x="104" y="98" fill="#ffffff" font-family="Inter, Arial" font-size="26" font-weight="700">TechWealth</text>
+      <text x="272" y="98" fill="#ff9800" font-family="Inter, Arial" font-size="26" font-weight="700">Guide</text>
+    </svg>
+
+    <div style="flex:1">
+      <h1 style="font-size:1rem;margin-bottom:6px">TechWealth Guide</h1>
+      <p class="small">Making tomorrow's millionaires today — AI, Crypto & Tech Investing.</p>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#learn-ai">Learn AI</a>
+    <a href="#crypto-academy">Crypto Academy</a>
+    <a href="#investing-finance">Investing</a>
+    <a href="#build-business">Build a Business</a>
+    <a href="#tools-resources">Tools & Resources</a>
+    <a href="#newsletter">Subscribe</a>
+    <a href="#about">About</a>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h2 style="font-size:1.6rem;margin-bottom:8px">Master AI, Crypto, & Tech Investing</h2>
+      <p style="max-width:700px;margin:0 auto 12px">Step-by-step actionable lessons, templates, and tools to build projects and wealth. Free + gated bonuses to capture high-intent leads.</p>
+      <button class="btn" onclick="document.getElementById('newsletter-email').focus()">Join Newsletter</button>
+    </div>
+  </section>
+
+  <main class="container">
+
+    <!-- demo ad -->
+    <div class="ad-placeholder">Demo Ad / Affiliate Banner</div>
+
+    <!-- Trending -->
+    <section id="trending" style="margin-top:18px">
+      <h2>Trending Articles & Lessons</h2>
+      <div class="grid" style="margin-top:12px">
+        <article class="card" id="ai-for-beginners">
+          <h3>AI for Beginners: Tools & Applications</h3>
+          <p class="small">Practical toolset and project ideas. Full bonus pack (prompt library & mini-templates) gated.</p>
+          <ul>
+            <li><strong>OpenAI (ChatGPT & API)</strong> — prompts, fine-tuning ideas, and automation examples.</li>
+            <li><strong>Claude (Anthropic)</strong> — safe long-form reasoning tasks.</li>
+            <li><strong>Hugging Face</strong> — deployable models & datasets.</li>
+            <li><strong>Runway, DALL·E, MidJourney</strong> — content & media workflows.</li>
+            <li><strong>GitHub Copilot</strong> — developer productivity workflows.</li>
+          </ul>
+          <div style="margin-top:8px">
+            <button class="btn" onclick="openLessonGate('ai','soft')">Get Prompt Pack (email)</button>
+            <a style="margin-left:8px" class="small" href="#learn-ai">Open lessons</a>
+          </div>
+        </article>
+
+        <article class="card" id="crypto-basics">
+          <h3>Crypto Basics: How to Buy, Store & Trade</h3>
+          <p class="small">Wallet setup, exchange safety, and a beginner trading plan. Full Guide gated (email).</p>
+          <div style="margin-top:8px">
+            <button class="btn" onclick="openLessonGate('crypto','soft')">Unlock Beginner Guide</button>
+            <div style="margin-top:8px" class="ad-placeholder">Affiliate exchange promos</div>
+          </div>
+        </article>
+
+        <article class="card" id="tech-investing">
+          <h3>Tech Investing 101</h3>
+          <p class="small">How to evaluate tech companies, spot winners, and size positions. Full stock analysis template gated.</p>
+          <ol style="padding-left:18px">
+            <li><a href="#lesson-valuation">Valuation Basics</a></li>
+            <li><a href="#lesson-risk">Risk Management</a></li>
+            <li><a href="#lesson-trends">Identifying Trends</a></li>
+          </ol>
+          <div style="margin-top:8px">
+            <button class="btn" onclick="openLessonGate('investing','soft')">Get Stock Analysis Template</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Learning paths with gating per Option 1 (mix of open + soft + hard gates) -->
+    <section id="learning-paths" style="margin-top:22px">
+      <h2>Learning Paths</h2>
+      <div class="grid" style="margin-top:12px">
+
+        <!-- AI Learning Path -->
+        <div class="card" id="learn-ai">
+          <h3>AI Learning Path</h3>
+          <p class="small">From tool setup to building production automations.</p>
+          <ol>
+            <li><strong>Lesson 1 — Intro & Tools (Open)</strong>
+              <p class="small">Overview of tools, accounts, security & quick wins.</p>
+            </li>
+            <li><strong>Lesson 2 — Prompt Engineering (Soft Gate)</strong>
+              <p class="small">Advanced prompt patterns + downloadable prompt library (email to unlock).</p>
+              <button class="btn" onclick="openLessonGate('ai','soft')">Unlock Prompt Library</button>
+            </li>
+            <li><strong>Lesson 3 — Building an App (Hard Gate)</strong>
+              <p class="small">Complete blueprint to ship an AI automation (includes code snippets & deployment checklist) — gated.</p>
+              <button class="btn" onclick="openLessonGate('ai','hard')">Get Full App Blueprint</button>
+            </li>
+          </ol>
+        </div>
+
+        <!-- Crypto Learning Path -->
+        <div class="card" id="crypto-academy">
+          <h3>Crypto Learning Path</h3>
+          <p class="small">Wallets, exchanges, DeFi and risk management.</p>
+          <ol>
+            <li><strong>Lesson 1 — Wallets & Security (Open)</strong>
+              <p class="small">How to set up a hardware wallet and keep funds safe.</p>
+            </li>
+            <li><strong>Lesson 2 — Trading Plan (Soft Gate)</strong>
+              <p class="small">Template & plan for position sizing — gated document.</p>
+              <button class="btn" onclick="openLessonGate('crypto','soft')">Get Trading Plan</button>
+            </li>
+            <li><strong>Lesson 3 — DeFi & Yield (Hard Gate)</strong>
+              <p class="small">Advanced DeFi playbook, risk checklists, and top strategies — gated.</p>
+              <button class="btn" onclick="openLessonGate('crypto','hard')">Unlock DeFi Playbook</button>
+            </li>
+          </ol>
+        </div>
+
+        <!-- Entrepreneurship Path -->
+        <div class="card" id="build-business">
+          <h3>Entrepreneurship Path</h3>
+          <p class="small">From idea to traction and monetization.</p>
+          <ol>
+            <li><strong>Lesson 1 — Idea to MVP (Open)</strong>
+              <p class="small">How to validate ideas cheaply using users & experiments.</p>
+            </li>
+            <li><strong>Lesson 2 — GTM & Growth (Soft Gate)</strong>
+              <p class="small">Growth playbook + channel templates (email gated).</p>
+              <button class="btn" onclick="openLessonGate('biz','soft')">Get GTM Templates</button>
+            </li>
+            <li><strong>Lesson 3 — Monetization & Scaling (Hard Gate)</strong>
+              <p class="small">Pricing models, sales funnels and scaling checklist — gated.</p>
+              <button class="btn" onclick="openLessonGate('biz','hard')">Get Monetization Blueprint</button>
+            </li>
+          </ol>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Tools & Calculators -->
+    <section id="tools-resources" style="margin-top:22px">
+      <h2>Tools & Calculators</h2>
+      <div class="grid" style="margin-top:12px">
+        <!-- Crypto Profit Calculator -->
+        <div class="card">
+          <h3>Crypto Profit Calculator</h3>
+          <p class="small">Simple profit + ROI calculation</p>
+          <form id="profitCalc" onsubmit="return false" style="margin-top:8px">
+            <label class="small">Buy Price ($)</label><br>
+            <input id="buyPrice" type="number" step="any" placeholder="e.g. 200" style="padding:8px;border-radius:6px;border:1px solid #e8eef8;width:100%"><br><br>
+            <label class="small">Sell Price ($)</label><br>
+            <input id="sellPrice" type="number" step="any" placeholder="e.g. 300" style="padding:8px;border-radius:6px;border:1px solid #e8eef8;width:100%"><br><br>
+            <label class="small">Amount</label><br>
+            <input id="amountCoins" type="number" step="any" placeholder="e.g. 1.5" style="padding:8px;border-radius:6px;border:1px solid #e8eef8;width:100%"><br><br>
+            <button class="btn" onclick="calculateProfit()">Calculate</button>
+          </form>
+          <div id="profitResult" class="small muted" style="margin-top:8px"></div>
+        </div>
+
+        <!-- AI Startup Estimator -->
+        <div class="card">
+          <h3>AI Startup Cost Estimator</h3>
+          <p class="small">Estimate monthly burn & first-year cost</p>
+          <form id="aiEstimator" onsubmit="return false" style="margin-top:8px">
+            <label class="small">Developers</label><br>
+            <input id="devs" type="number" min="0" value="2" style="padding:8px;border-radius:6px;border:1px solid #e8eef8;width:100%"><br><br>
+            <label class="small">Monthly cloud & compute ($)</label><br>
+            <input id="cloud" type="number" min="0" value="500" style="padding:8px;border-radius:6px;border:1px solid #e8eef8;width:100%"><br><br>
+            <label class="small">ML API costs monthly ($)</label><br>
+            <input id="mlcost" type="number" min="0" value="300" style="padding:8px;border-radius:6px;border:1px solid #e8eef8;width:100%"><br><br>
+            <label class="small">One-time dev/design ($)</label><br>
+            <input id="oneTime" type="number" min="0" value="10000" style="padding:8px;border-radius:6px;border:1px solid #e8eef8;width:100%"><br><br>
+            <button class="btn" onclick="estimateAIStartup()">Estimate</button>
+          </form>
+          <div id="aiEstimateResult" class="small muted" style="margin-top:8px"></div>
+        </div>
+
+        <!-- Portfolio Tracker -->
+        <div class="card">
+          <h3>Portfolio Tracker</h3>
+          <p class="small">Local tracking with CSV export — replace with backend later</p>
+          <form id="portfolioForm" onsubmit="return false" style="display:flex;gap:8px;flex-wrap:wrap">
+            <input id="assetName" placeholder="Asset (e.g. BTC)" style="padding:8px;border-radius:6px;border:1px solid #e8eef8;flex:1">
+            <input id="assetQty" type="number" step="any" placeholder="Qty" style="padding:8px;border-radius:6px;border:1px solid #e8eef8;width:100px">
+            <input id="assetPrice" type="number" step="any" placeholder="Price" style="padding:8px;border-radius:6px;border:1px solid #e8eef8;width:120px">
+            <button class="btn" onclick="addAsset()">Add</button>
+          </form>
+          <table id="portfolioTable"><thead><tr><th>Asset</th><th>Qty</th><th>Price</th><th>Value</th><th></th></tr></thead><tbody></tbody></table>
+          <div class="small muted" style="margin-top:8px">Total: $<span id="portfolioTotal">0.00</span></div>
+          <div style="margin-top:8px">
+            <button class="btn" onclick="exportPortfolioCSV()">Export CSV</button>
+            <button class="close-btn" onclick="clearPortfolio()">Clear</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comparison & hosting -->
+    <section id="comparison" style="margin-top:22px">
+      <h2>Top Tools & Platforms</h2>
+      <div class="grid" style="margin-top:12px">
+        <div class="card">
+          <h3>Best Crypto Exchanges</h3>
+          <p class="small">Binance (advanced), Coinbase (beginner), Kraken (security)</p>
+          <div style="margin-top:10px">
+            <button class="btn" onclick="openBinanceGate()">Get Binance Referral</button>
+            <div id="binanceReveal" class="small muted" style="margin-top:8px"></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Best AI Tools for Productivity</h3>
+          <ul>
+            <li>OpenAI — ChatGPT & API</li>
+            <li>Anthropic — Claude</li>
+            <li>Google — Gemini</li>
+            <li>GitHub Copilot — developer tools</li>
+            <li>Hugging Face — models & datasets</li>
+            <li>Runway — creative tools</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Top Hosting for Tech Startups</h3>
+          <ul>
+            <li><strong>AWS</strong> — scale & managed ML infra (SageMaker)</li>
+            <li><strong>Google Cloud</strong> — Vertex AI & GCP integration</li>
+            <li><strong>Azure</strong> — enterprise and ML tooling</li>
+            <li><strong>DigitalOcean</strong> — cost effective droplets for prototypes</li>
+            <li><strong>Vercel / Netlify</strong> — frontend/Jamstack hosting</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter (MailerLite embedded + fallback) -->
+    <section id="newsletter" style="margin-top:22px" class="card">
+      <h2>Join Our Newsletter</h2>
+      <p class="small">Free guides, premium gated downloads, and curated deal alerts.</p>
+
+      <!-- MailerLite embed (if JS loads this renders a subscription form).
+           Also keep a simple fallback email input for instant local capture. -->
+      <div style="margin:10px 0">
+        <!-- 1) MailerLite embedded form (user provided) -->
+        <div style="margin-bottom:8px">
+          <div class="ml-embedded" data-form="PDyzKZ"></div>
+        </div>
+
+        <!-- 2) Fallback form so signups always work even if MailerLite blocks -->
+        <form id="newsletterForm" onsubmit="return false" style="margin-top:6px">
+          <input id="newsletter-email" type="email" placeholder="Enter your email" required>
+          <button class="btn" onclick="subscribeNewsletter()">Subscribe</button>
+          <button type="button" class="close-btn" onclick="downloadSubscribers()">Download CSV</button>
+        </form>
+        <div id="newsletterStatus" class="small muted" style="margin-top:8px"></div>
+      </div>
+    </section>
+
+    <!-- Detailed lesson content (actual strategic content) -->
+    <section id="content-details" style="margin-top:22px">
+      <h2>Strategic Lessons (selected)</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>AI Roadmap — Strategic Lessons</h3>
+          <h4>Lesson A1: Choose the Right Use Case</h4>
+          <p class="small">Start with high-frequency, low-decision tasks: email summarization, customer triage, content repurposing. Prioritize tasks with measurable time savings so ROI is trackable.</p>
+          <h4>Lesson A2: Prompt & Data Strategy</h4>
+          <p class="small">Create a prompt library, capture user inputs, and test with a fixed validation dataset. Version prompts and measure outputs with quality KPIs (accuracy, helpfulness, time saved).</p>
+          <h4>Lesson A3: Deployment & Cost Control</h4>
+          <p class="small">Use caching, batching, and smaller models for low-cost inference. Monitor token usage and set rate limits; move heavy offline training to scheduled jobs with spot instances.</p>
+        </div>
+
+        <div class="card">
+          <h3>Crypto Strategy — Strategic Lessons</h3>
+          <h4>Lesson C1: Security First</h4>
+          <p class="small">Hardware wallets + cold storage for long-term holdings. Use two-factor auth & withdrawal whitelists on exchanges.</p>
+          <h4>Lesson C2: Position Sizing & Rationale</h4>
+          <p class="small">Define thesis per asset, set position size by risk capital, and use stop rules. Track trade journaling with reasons, entry, exit, and emotional state.</p>
+          <h4>Lesson C3: DeFi Risk Management</h4>
+          <p class="small">Avoid single-point-of-failure contracts; diversify across protocols; understand impermanent loss and perform gas cost vs. yield analysis.</p>
+        </div>
+
+        <div class="card">
+          <h3>Tech Investing — Strategic Lessons</h3>
+          <h4>Lesson T1: Product-led Growth Metrics</h4>
+          <p class="small">For SaaS, track ARR growth, free trial conversion, and net retention. For platforms, measure engagement and network effects.</p>
+          <h4>Lesson T2: Valuation & Moat</h4>
+          <p class="small">Assess TAM, distribution advantage, and defensibility (data, network, integrations). Use discounted cash flow conservatively for early-stage.</p>
+          <h4>Lesson T3: Portfolio Construction</h4>
+          <p class="small">Blend core long-term positions with tactical small bets on innovation sectors (AI infra, decentralized finance). Rebalance quarterly.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- About / Privacy / Terms -->
+    <section id="about" style="margin-top:22px" class="card">
+      <h2>About TechWealth Guide</h2>
+      <p class="small">We help builders and investors learn AI, crypto and tech investing with practical playbooks and tools. Educational content only — not financial advice.</p>
+      <p class="small">Contact: <a href="mailto:Techwealthguide1@gmail.com">Techwealthguide1@gmail.com</a></p>
+    </section>
+
+    <section id="privacy-policy" style="margin-top:12px" class="card">
+      <h2>Privacy Policy (summary)</h2>
+      <p class="small">In this demo, subscriber emails are saved locally and via MailerLite if available. Replace with your legal privacy policy before publication. Do not collect sensitive personal data without consent.</p>
+    </section>
+
+    <section id="terms" style="margin-top:12px" class="card">
+      <h2>Terms</h2>
+      <p class="small">Content is educational. Not financial advice. Use at your own risk.</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Tech Wealth Guide. All rights reserved.</p>
+    <p class="small">Follow: <a href="https://facebook.com/Techwealthguide" target="_blank">Facebook</a> | <a href="https://www.tiktok.com/@techwealthguide" target="_blank">TikTok</a> | <a href="https://instagram.com/TechWealth.Official" target="_blank">Instagram</a></p>
+  </footer>
+
+  <!-- Modal background for gates -->
+  <div id="modal-bg" class="modal-bg" onclick="closeModal(event)">
+    <div class="modal" id="gateModal" onclick="event.stopPropagation()">
+      <h3 id="gateTitle">Unlock content</h3>
+      <p id="gateDesc" class="small">Enter your email below to unlock this resource. You will receive our newsletter and the gated download.</p>
+
+      <!-- local email gate form (we also render a MailerLite embed below for reliability) -->
+      <input id="gate-email" type="email" placeholder="Your email" style="padding:10px;border-radius:8px;border:1px solid #e8eef8;width:100%"><br><br>
+      <div style="display:flex;gap:8px">
+        <button class="btn" onclick="submitGate()">Unlock</button>
+        <button class="close-btn" onclick="hideModal()">Cancel</button>
+      </div>
+
+      <div id="gate-ml" style="margin-top:12px">
+        <!-- MailerLite embedded copy (renders if script loaded) -->
+        <div class="ml-embedded" data-form="PDyzKZ"></div>
+      </div>
+
+      <div id="gate-reveal" class="hidden" style="margin-top:12px"></div>
+    </div>
+  </div>
+
+<script>
+/* ---------- Utilities & storage ---------- */
+function validateEmail(email){ return /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email); }
+function getSubscribers(){ try{ return JSON.parse(localStorage.getItem('twg_subscribers')||'[]'); }catch(e){return []} }
+function saveSubscriberLocal(email,tag){
+  if(!email) return;
+  const subs = getSubscribers();
+  if(!subs.find(s=>s.email===email && s.tag===tag)){
+    subs.push({email:email,tag:tag||'site',date:new Date().toISOString()});
+    localStorage.setItem('twg_subscribers', JSON.stringify(subs));
+  }
+}
+function downloadCSV(filename, rows){
+  const csv = rows.map(r => r.map(c=>`"${String(c).replace(/"/g,'""')}"`).join(',')).join('\\n');
+  const blob = new Blob([csv], {type:'text/csv'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a'); a.href = url; a.download = filename; document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(()=>URL.revokeObjectURL(url), 500);
+}
+
+/* ---------- Newsletter fallback + MailerLite ---------- */
+function subscribeNewsletter(){
+  const el = document.getElementById('newsletter-email');
+  const status = document.getElementById('newsletterStatus');
+  const email = (el && el.value || '').trim();
+  if(!validateEmail(email)){ status.textContent = 'Please enter a valid email.'; return; }
+  // Save locally
+  saveSubscriberLocal(email,'newsletter');
+  status.textContent = 'Thanks — subscribed (local demo).';
+  if(el) el.value='';
+  // If MailerLite script loaded we also show the embedded form (which will collect)
+  // The ml('forms'...) API isn't documented in all cases here; keeping fallback ensures capture
+}
+function downloadSubscribers(){
+  const subs = getSubscribers();
+  if(!subs.length){ alert('No subscribers saved yet.'); return; }
+  const rows = [['email','tag','date'], ...subs.map(s=>[s.email,s.tag,s.date])];
+  downloadCSV('subscribers.csv', rows);
+}
+
+/* ---------- Gating UX ---------- */
+let currentGate = {type:'',level:''};
+function openLessonGate(kind, level){
+  // kind: ai | crypto | investing | biz
+  // level: soft | hard
+  currentGate = {kind:kind, level:level};
+  document.getElementById('gateTitle').textContent = (level==='soft'?'Unlock Bonus':'Unlock Advanced Guide') + ' — ' + kind.toUpperCase();
+  document.getElementById('gateDesc').textContent = (level==='soft'?'Enter your email to receive the bonus download and newsletter.':'This advanced guide requires a quick signup. Enter your email to receive the full blueprint and our newsletter.');
+  document.getElementById('gate-email').value = '';
+  document.getElementById('gate-reveal').classList.add('hidden');
+  document.getElementById('modal-bg').style.display = 'flex';
+}
+function closeModal(e){ if(e.target.id==='modal-bg') hideModal(); }
+function hideModal(){ document.getElementById('modal-bg').style.display='none'; }
+function submitGate(){
+  const em = (document.getElementById('gate-email').value||'').trim();
+  if(!validateEmail(em)){ alert('Enter a valid email.'); return; }
+  // local save
+  saveSubscriberLocal(em,'gate_'+currentGate.kind+'_'+currentGate.level);
+  // Reveal content based on gate
+  const reveal = document.getElementById('gate-reveal');
+  reveal.classList.remove('hidden');
+  // Soft/hard choices: we reveal appropriate content
+  if(currentGate.kind==='ai'){
+    if(currentGate.level==='soft'){
+      reveal.innerHTML = '<p class="small">Download: <a href="#" onclick="downloadExample(\\'ai-prompt-pack\\')">AI Prompt Pack (sample)</a></p>';
+    } else {
+      reveal.innerHTML = '<p class="small">Full App Blueprint: <a href="#" onclick="downloadExample(\\'ai-blueprint\\')">Download full blueprint</a></p>';
+    }
+  } else if(currentGate.kind==='crypto'){
+    if(currentGate.level==='soft'){
+      reveal.innerHTML = '<p class="small">Download: <a href="#" onclick="downloadExample(\\'crypto-trading-plan\\')">Crypto Trading Plan (template)</a></p>';
+    } else {
+      reveal.innerHTML = '<p class="small">DeFi Playbook: <a href="#" onclick="downloadExample(\\'defi-playbook\\')">Download DeFi Playbook</a></p>';
+    }
+  } else if(currentGate.kind==='investing'){
+    reveal.innerHTML = '<p class="small">Template: <a href="#" onclick="downloadExample(\\'stock-template\\')">Stock Analysis Template</a></p>';
+  } else if(currentGate.kind==='biz'){
+    if(currentGate.level==='soft'){
+      reveal.innerHTML = '<p class="small">GTM Templates: <a href="#" onclick="downloadExample(\\'gtm-templates\\')">Download</a></p>';
+    } else {
+      reveal.innerHTML = '<p class="small">Monetization Blueprint: <a href="#" onclick="downloadExample(\\'monetization-blueprint\\')">Download</a></p>';
+    }
+  }
+  // show mailerlite embedded (if loaded) — ML form is visible in modal too
+}
+
+/* demo download function (in real site serve real files) */
+function downloadExample(key){
+  const rows = [['download','user_email','date'], [key,'demo@demo','' + new Date().toISOString()]];
+  downloadCSV(key + '.csv', rows); // placeholder "download"
+  alert('Demo download generated (replace with real file downloads hosted on your server).');
+}
+
+/* ---------- Binance Gate (special affiliate reveal) ---------- */
+const BINANCE_LINK = 'https://accounts.binance.com/register?ref=EQOGZTVS';
+const BINANCE_CODE = 'EQOGZTVS';
+function openBinanceGate(){
+  // reuse the modal but reveal affiliate after email submission
+  currentGate = {kind:'binance', level:'hard'};
+  document.getElementById('gateTitle').textContent = 'Binance Referral';
+  document.getElementById('gateDesc').textContent = 'Enter your email to receive the Binance referral link and extra signup tips.';
+  document.getElementById('gate-email').value='';
+  document.getElementById('gate-reveal').classList.add('hidden');
+  document.getElementById('modal-bg').style.display = 'flex';
+}
+function revealBinance(email){
+  saveSubscriberLocal(email,'binance_referral');
+  const reveal = document.getElementById('gate-reveal');
+  reveal.classList.remove('hidden');
+  reveal.innerHTML = '<p class="small">Your Binance referral: <a href="' + BINANCE_LINK + '" target="_blank">Open Binance (referral)</a><br>Referral code: <strong>' + BINANCE_CODE + '</strong></p>';
+}
+
+/* Hook submitGate to special binance reveal if currentGate.kind === 'binance' */
+(function overrideSubmitGate(){
+  const orig = submitGate;
+  submitGate = function(){
+    const em = (document.getElementById('gate-email').value||'').trim();
+    if(!validateEmail(em)){ alert('Enter a valid email.'); return; }
+    if(currentGate && currentGate.kind === 'binance'){
+      revealBinance(em);
+      hideModalAfter(2000);
+      return;
+    }
+    // fallback to normal gate logic
+    orig();
+    hideModalAfter(1000);
+  }
+})();
+function hideModalAfter(ms){ setTimeout(()=>{ document.getElementById('modal-bg').style.display='none'; }, ms); }
+
+/* ---------- Calculators & portfolio ---------- */
+function calculateProfit(){
+  const buy = parseFloat(document.getElementById('buyPrice').value||0);
+  const sell = parseFloat(document.getElementById('sellPrice').value||0);
+  const amt = parseFloat(document.getElementById('amountCoins').value||0);
+  if(isNaN(buy)||isNaN(sell)||isNaN(amt)){ document.getElementById('profitResult').textContent='Enter valid numbers'; return; }
+  const profit = (sell - buy) * amt;
+  const roi = (profit / (buy * amt)) * 100;
+  document.getElementById('profitResult').textContent = 'Profit: $' + profit.toFixed(2) + ' — ROI: ' + roi.toFixed(2) + '%';
+}
+
+/* AI estimator */
+function estimateAIStartup(){
+  const devs = Number(document.getElementById('devs').value||0);
+  const cloud = Number(document.getElementById('cloud').value||0);
+  const mlcost = Number(document.getElementById('mlcost').value||0);
+  const oneTime = Number(document.getElementById('oneTime').value||0);
+  const avgDevSalary = 6500;
+  const monthly = (devs * avgDevSalary) + cloud + mlcost;
+  const summary = 'Estimated monthly burn: $' + monthly.toLocaleString() + '. One-time costs: $' + oneTime.toLocaleString() + '. First-year total: $' + (monthly*12 + oneTime).toLocaleString();
+  document.getElementById('aiEstimateResult').textContent = summary;
+}
+
+/* Portfolio */
+function getPortfolio(){ try{ return JSON.parse(localStorage.getItem('twg_portfolio')||'[]'); }catch(e){return []} }
+function setPortfolio(list){ localStorage.setItem('twg_portfolio', JSON.stringify(list)); }
+function renderPortfolio(){
+  const list = getPortfolio(); const tbody = document.querySelector('#portfolioTable tbody'); tbody.innerHTML=''; let total=0;
+  list.forEach((it, idx)=>{
+    const val = (parseFloat(it.qty)||0) * (parseFloat(it.price)||0);
+    total += val;
+    const tr = document.createElement('tr');
+    tr.innerHTML = '<td>' + escapeHtml(it.name) + '</td><td>' + it.qty + '</td><td>$' + Number(it.price).toFixed(2) + '</td><td>$' + val.toFixed(2) + '</td><td><button class="close-btn" onclick="removeAsset(' + idx + ')">Remove</button></td>';
+    tbody.appendChild(tr);
+  });
+  document.getElementById('portfolioTotal').textContent = total.toFixed(2);
+}
+function addAsset(){
+  const name = document.getElementById('assetName').value.trim(); const qty = parseFloat(document.getElementById('assetQty').value||0); const price = parseFloat(document.getElementById('assetPrice').value||0);
+  if(!name || isNaN(qty) || isNaN(price)){ alert('Enter asset name, qty and price'); return; }
+  const list = getPortfolio(); list.push({name, qty, price}); setPortfolio(list); renderPortfolio();
+  document.getElementById('assetName').value=''; document.getElementById('assetQty').value=''; document.getElementById('assetPrice').value='';
+}
+function removeAsset(i){ const list = getPortfolio(); list.splice(i,1); setPortfolio(list); renderPortfolio(); }
+function clearPortfolio(){ if(!confirm('Clear portfolio?')) return; localStorage.removeItem('twg_portfolio'); renderPortfolio(); }
+function exportPortfolioCSV(){ const rows=[['Asset','Qty','Price']]; getPortfolio().forEach(r=>rows.push([r.name,r.qty,r.price])); downloadCSV('portfolio.csv', rows); }
+function escapeHtml(s){ return String(s).replace(/[&<>"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+
+/* ---------- Init ---------- */
+(function init(){
+  renderPortfolio();
+  const subs = getSubscribers();
+  if(subs.length) document.getElementById('newsletterStatus').textContent = 'Saved subscribers: ' + subs.length + ' (local demo)';
+  // ensure ml script has account call (we added earlier)
+  // If the MailerLite widget loads it will render the embedded divs automatically.
+})();
+</script>
+
+</body>
+</html>
