@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>AI Learning Path — TechWealthGuide</title>
+<link rel="icon" href="/assets/favicon.png">
+<style>
+body{margin:0;font-family:Inter,Arial;background:#0c0f1a;color:#eef;line-height:1.6;padding:20px}
+a{color:#4db1ff;text-decoration:none}
+.container{max-width:900px;margin:auto}
+.card{background:#111726;padding:20px;border-radius:10px;margin-top:20px}
+.btn{display:inline-block;margin-top:14px;padding:12px 18px;background:#ff8a3c;color:#000;font-weight:700;border-radius:10px}
+h1,h2,h3{margin:0 0 12px 0}
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>AI Learning Path</h1>
+<p>Welcome to the step-by-step AI path. Start with the fundamentals, then unlock the advanced blueprint using the email gate.</p>
+
+<div class="card">
+<h2>Beginner Foundations</h2>
+<ul>
+<li>What AI is (simple explanation)</li>
+<li>Types of AI tools</li>
+<li>How LLMs like ChatGPT work</li>
+<li>Prompting basics</li>
+<li>How to apply AI to earn income</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>Skills You Will Build</h2>
+<ul>
+<li>Prompt engineering</li>
+<li>AI research workflow</li>
+<li>Automation using AI tools</li>
+<li>Creating AI-powered content</li>
+<li>Building simple AI apps</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>Continue</h2>
+<p>Move to the advanced AI blueprint — monetization, templates, workflows.</p>
+<a class="btn" href="/gate.html?gate=ai-hard">Unlock Advanced Lessons</a>
+</div>
+
+</div>
+</body>
+</html>
