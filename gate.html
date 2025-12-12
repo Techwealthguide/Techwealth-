@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Email Gate — TechWealthGuide</title>
+<link rel="icon" href="/assets/favicon.png">
+
+<style>
+body{margin:0;font-family:Inter,Arial;background:#0b0f19;color:#eef;line-height:1.6;padding:20px}
+.container{max-width:650px;margin:auto;text-align:center}
+.card{background:#111726;padding:30px;border-radius:12px;margin-top:40px}
+input{width:100%;padding:12px;border-radius:10px;border:1px solid #222a3a;background:#0d1220;color:#fff;margin-top:10px}
+button{padding:14px 20px;border-radius:10px;border:none;background:#ff8a3c;color:#000;margin-top:12px;font-weight:700;cursor:pointer;width:100%}
+h1,h2,h3{margin:0 0 12px 0}
+p{color:#b6c3e0}
+a{color:#4db1ff;text-decoration:none}
+#status{margin-top:12px;font-weight:600}
+</style>
+
+<!-- MailerLite Universal -->
+<script>
+(function(w,d,e,u,f,l,n){w[f]=w[f]||function(){
+(w[f].q=w[f].q||[]).push(arguments);};
+l=d.createElement(e);l.async=1;l.src=u;
+n=d.getElementsByTagName(e)[0];
+n.parentNode.insertBefore(l,n);})
+(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+try{ ml('account','1947917'); }catch(e){}
+</script>
+
+</head>
+
+<body>
+<div class="container">
+
+<h1>Email Verification Required</h1>
+<p>Enter your email once to unlock this premium lesson forever.</p>
+
+<div class="card">
+
+<div class="ml-embedded" data-form="PDyzKZ"></div>
+
+<p style="margin-top:14px">If the form doesn’t appear, use the fallback below:</p>
+
+<input type="email" id="email" placeholder="you@example.com">
+<button onclick="fallbackSignup()">Continue</button>
+
+<div id="status"></div>
+</div>
+
+</div>
+
+<script>
+const LOCAL_KEY = "twg_local_access";
+
+// Utility – validate email
+function valid(e){
+ return /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(e);
+}
+
+// Determine where to redirect after signup
+function getRedirect(){
+ let url = new URL(window.location.href);
+ return url.searchParams.get("gate") || "ai-hard";
+}
+
+// Map gate → actual page
+function resolvePage(g){
+ const map={
+  "ai-hard":"/ai/advanced.html",
+  "crypto-hard":"/crypto/advanced.html",
+  "investing-hard":"/investing/advanced.html",
+  "startup-hard":"/startup/advanced.html",
+  "binance-hard":"https://accounts.binance.com/register?ref=EQOGZTVS"
+ };
+ return map[g] || "/index.html";
+}
+
+// Fallback local signup
+function fallbackSignup(){
+ let email=document.getElementById("email").value.trim();
+ if(!valid(email)){
+   document.getElementById("status").textContent="Enter a valid email.";
+   return;
+ }
+
+ let gate = getRedirect();
+ let store = JSON.parse(localStorage.getItem(LOCAL_KEY)||"[]");
+
+ store.push({
+    email,
+    gate,
+    date:new Date().toISOString()
+ });
+
+ localStorage.setItem(LOCAL_KEY, JSON.stringify(store));
+
+ document.getElementById("status").textContent="Success! Redirecting...";
+
+ setTimeout(()=>{
+   window.location.href = resolvePage(gate);
+ },1000);
+}
+</script>
+
+</body>
+</html>
