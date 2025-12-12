@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Crypto Basics — TechWealthGuide</title>
+<link rel="icon" href="/assets/favicon.png">
+<style>
+body{margin:0;font-family:Inter,Arial;background:#0c0f1a;color:#eef;line-height:1.6;padding:20px}
+.container{max-width:900px;margin:auto}
+.card{background:#111726;padding:20px;border-radius:10px;margin-top:20px}
+a{color:#4db1ff;text-decoration:none}
+.btn{display:inline-block;margin-top:14px;padding:12px 18px;background:#ff8a3c;color:#000;font-weight:700;border-radius:10px}
+h1,h2,h3{margin:0 0 12px 0}
+</style>
+</head>
+<body>
+
+<div class="container">
+<h1>Crypto Basics</h1>
+<p>Crypto doesn’t have to be complicated. Start with the fundamentals, then move into advanced strategies after unlocking with your email.</p>
+
+<div class="card">
+<h2>Beginner Topics</h2>
+<ul>
+<li>What crypto is and why it matters</li>
+<li>Blockchain explained simply</li>
+<li>How wallets work (hot vs cold)</li>
+<li>How exchanges work</li>
+<li>Spot, futures, staking — explained</li>
+<li>Understanding volatility safely</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>Wallet Setup</h2>
+<ul>
+<li>How to set up a secure wallet</li>
+<li>How to avoid scams</li>
+<li>How to backup your private keys</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>Continue</h2>
+<p>Unlock the advanced strategies and Binance affiliate with the email gate.</p>
+<a class="btn" href="/gate.html?gate=crypto-hard">Unlock Advanced Crypto Lessons</a>
+</div>
+
+</div>
+
+</body>
+</html>
